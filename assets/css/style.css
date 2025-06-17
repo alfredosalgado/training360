@@ -1197,7 +1197,7 @@ input, textarea, select {
 /* =============== DARK THEME =============== */
 @media (prefers-color-scheme: dark) {
   .header {
-    background: rgba(33, 37, 41, 0.95);
+    background: #2f4255;
   }
   
   .nav__link {
