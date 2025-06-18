@@ -5,7 +5,7 @@ const navClose = document.getElementById('nav-close');
 const navLinks = document.querySelectorAll('.nav__link');
 const sections = document.querySelectorAll('section[id]');
 const scrollUp = document.getElementById('scroll-up');
-const contactForm = document.getElementById('contact-form');
+const contactForm = document.getElementById('formContacto');
 const contactMessage = document.getElementById('contact-message');
 
 /*=============== MENU SHOW & HIDE ===============*/
@@ -126,116 +126,46 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /*=============== CONTACT FORM ===============*/
-const validateEmail = (email) => {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
-};
-
-const validatePhone = (phone) => {
-    const re = /^[\+]?[(]?[\d\s\-\(\)]{8,}$/;
-    return re.test(phone);
-};
-
-const showMessage = (message, type) => {
-    contactMessage.textContent = message;
-    contactMessage.className = `contact__form-message ${type}`;
-    
-    setTimeout(() => {
-        contactMessage.className = 'contact__form-message';
-    }, 5000);
-};
-
-const resetForm = () => {
-    contactForm.reset();
-    
-    // Reset floating labels
-    const formGroups = contactForm.querySelectorAll('.contact__form-group');
-    formGroups.forEach(group => {
-        const input = group.querySelector('.contact__form-input');
-        const label = group.querySelector('.contact__form-label');
-        
-        if (input && label) {
-            input.value = '';
-            input.placeholder = ' ';
-        }
-    });
-};
-
+// Manejo del formulario de contacto con envío AJAX
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
+        e.preventDefault(); // Prevenir envío por defecto
         
-        // Get form data
+        // Crear FormData con los datos del formulario
         const formData = new FormData(contactForm);
-        const data = {
-            name: formData.get('name').trim(),
-            email: formData.get('email').trim(),
-            phone: formData.get('phone').trim(),
-            company: formData.get('company').trim(),
-            service: formData.get('service'),
-            message: formData.get('message').trim()
-        };
         
-        // Validation
-        if (!data.name) {
-            showMessage('Por favor, ingresa tu nombre completo.', 'error');
-            return;
-        }
-        
-        if (!data.email || !validateEmail(data.email)) {
-            showMessage('Por favor, ingresa un correo electrónico válido.', 'error');
-            return;
-        }
-        
-        if (!data.phone || !validatePhone(data.phone)) {
-            showMessage('Por favor, ingresa un número de teléfono válido.', 'error');
-            return;
-        }
-        
-        if (!data.service) {
-            showMessage('Por favor, selecciona un servicio de interés.', 'error');
-            return;
-        }
-        
-        // Simulate form submission
-        const submitButton = contactForm.querySelector('.contact__form-button');
-        const originalText = submitButton.innerHTML;
-        
-        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-        submitButton.disabled = true;
-        
-        // Simulate API call delay
-        setTimeout(() => {
-            // Create email content
-            const emailSubject = `Nueva solicitud de cotización - ${data.service}`;
-            const emailBody = `
-Nombre: ${data.name}
-Email: ${data.email}
-Teléfono: ${data.phone}
-Empresa: ${data.company || 'No especificada'}
-Servicio: ${data.service}
-
-Mensaje:
-${data.message || 'Sin mensaje adicional'}
-            `.trim();
-            
-            // Create mailto link
-            const mailtoLink = `mailto:training360ltda@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
-            
-            // Open email client
-            window.location.href = mailtoLink;
-            
-            // Show success message
-            showMessage('¡Solicitud enviada exitosamente! Se abrirá tu cliente de correo para confirmar el envío.', 'success');
-            
-            // Reset form
-            resetForm();
-            
-            // Reset button
-            submitButton.innerHTML = originalText;
-            submitButton.disabled = false;
-            
-        }, 2000);
+        // Enviar formulario por AJAX
+        fetch('enviar.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(responseText => {
+            // Verificar si la respuesta es exactamente el mensaje de éxito esperado
+            if (responseText.trim() === "Mensaje enviado correctamente.") {
+                // Mostrar popup de éxito
+                const popupExito = document.getElementById('popupExito');
+                if (popupExito) {
+                    popupExito.style.display = 'block';
+                    
+                    // Ocultar popup después de 4 segundos
+                    setTimeout(() => {
+                        popupExito.style.display = 'none';
+                    }, 4000);
+                }
+                
+                // Resetear formulario en caso de éxito
+                contactForm.reset();
+            } else {
+                // Mostrar mensaje de error si la respuesta no es la esperada
+                alert("Ocurrió un error al enviar el formulario.");
+            }
+        })
+        .catch(error => {
+            // Manejar errores de red o del fetch
+            console.error('Error:', error);
+            alert("Ocurrió un error al enviar el formulario.");
+        });
     });
 }
 
@@ -470,18 +400,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 100);
 });
 
-/*=============== SERVICE WORKER FOR PWA ===============*/
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-            .then(registration => {
-                console.log('SW registered: ', registration);
-            })
-            .catch(registrationError => {
-                console.log('SW registration failed: ', registrationError);
-            });
-    });
-}
+
 
 /*=============== ACCESSIBILITY IMPROVEMENTS ===============*/
 const setupAccessibility = () => {

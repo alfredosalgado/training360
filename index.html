@@ -3,9 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Training 360 - Líderes en Seguridad y Salud Ocupacional</title>
-    <meta name="description" content="Training 360 - Empresa especializada en asesorías en Seguridad y Salud Ocupacional en Chile. Garantizamos ambientes laborales seguros y en cumplimiento normativo.">
-    <meta name="keywords" content="seguridad laboral, salud ocupacional, prevención riesgos, capacitación seguridad, Chile, Training 360">
+    
+    <!-- SEO Meta Tags -->
+    <title>Training 360 - Líderes en Seguridad y Salud Ocupacional | Chile</title>
+    <meta name="description" content="Training 360 - Empresa líder en asesorías de Seguridad y Salud Ocupacional en Chile. Ofrecemos capacitación, auditorías y consultoría especializada para garantizar ambientes laborales seguros y cumplimiento normativo.">
+    <meta name="keywords" content="seguridad laboral, salud ocupacional, prevención riesgos, capacitación seguridad, auditoría cumplimiento, consultoría SSO, Chile, Training 360, Providencia">
+    <meta name="author" content="Training 360">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://training-360.cl">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Training 360 - Líderes en Seguridad y Salud Ocupacional">
+    <meta property="og:description" content="Empresa especializada en asesorías de Seguridad y Salud Ocupacional en Chile. Garantizamos ambientes laborales seguros y cumplimiento normativo.">
+    <meta property="og:image" content="https://training-360.cl/assets/img/logo.JPG">
+    <meta property="og:url" content="https://training-360.cl">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Training 360">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Training 360 - Líderes en Seguridad y Salud Ocupacional">
+    <meta name="twitter:description" content="Empresa especializada en asesorías de Seguridad y Salud Ocupacional en Chile.">
+    <meta name="twitter:image" content="https://training-360.cl/assets/img/logo.JPG">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Training 360",
+      "url": "https://training-360.cl",
+      "logo": "https://training-360.cl/assets/img/logo.JPG",
+      "description": "Empresa especializada en asesorías de Seguridad y Salud Ocupacional en Chile",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Coronel 2366",
+        "addressLocality": "Providencia",
+        "addressRegion": "Región Metropolitana",
+        "addressCountry": "Chile"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+56966492271",
+        "contactType": "customer service",
+        "email": "ssilva@training-360.cl"
+      }
+    }
+    </script>
+    
+    <!-- Google Analytics 4 -->
+    <!-- Reemplaza 'GA_MEASUREMENT_ID' con tu ID de medición real de Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      // Reemplaza 'GA_MEASUREMENT_ID' con tu ID de medición real
+      gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: 'Training 360 - Seguridad y Salud Ocupacional',
+        page_location: 'https://training-360.cl'
+      });
+    </script>
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -16,15 +75,32 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="./assets/img/logo.JPG">
+    <link rel="apple-touch-icon" href="./assets/img/logo.JPG">
 </head>
 <body>
-    <!-- Header -->
+    <!--==================== TOP BAR ====================-->
+    <div class="top-bar">
+        <div class="top-bar__container container">
+            <div class="top-bar__contact">
+                <a href="tel:+56966492271" class="top-bar__link">
+                    <i class="fas fa-phone"></i>
+                    +56 9 6649 2271
+                </a>
+                <a href="mailto:ssilva@training-360.cl" class="top-bar__link">
+                    <i class="fas fa-envelope"></i>
+                    ssilva@training-360.cl
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--==================== HEADER ====================-->
     <header class="header" id="header">
         <nav class="nav container">
-            <div class="nav__logo">
+            <a href="#" class="nav__logo">
                 <img src="./assets/img/logo.JPG" alt="Training 360 Logo" class="nav__logo-img">
-            </div>
-            
+            </a>
+
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">
@@ -46,12 +122,12 @@
                         <a href="#contacto" class="nav__link">Contacto</a>
                     </li>
                 </ul>
-                
+
                 <div class="nav__close" id="nav-close">
                     <i class="fas fa-times"></i>
                 </div>
             </div>
-            
+
             <div class="nav__toggle" id="nav-toggle">
                 <i class="fas fa-bars"></i>
             </div>
@@ -140,6 +216,7 @@
                     <div class="about__image">
                         <img src="./assets/img/team-safety.jpg" alt="Equipo profesional de Training 360" class="about__img">
                     </div>
+                    
                 </div>
             </div>
         </section>
@@ -177,6 +254,8 @@
                     <div class="challenge__image">
                         <img src="./assets/img/compliance-safety.jpg" alt="Cumplimiento normativo en seguridad industrial" class="challenge__img">
                     </div>
+                    
+
                 </div>
             </div>
         </section>
@@ -208,6 +287,10 @@
                             <li><i class="fas fa-check"></i> Plan de acción personalizado</li>
                             <li><i class="fas fa-check"></i> Seguimiento continuo</li>
                         </ul>
+                        <a href="https://wa.me/56966492271?text=Hola%20Training%20360,%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios%20de%20Asesoría%20en%20Cumplimiento%20Normativo.%20¿Podrían%20brindarme%20más%20información?" target="_blank" class="services__card-button">
+                            <i class="fab fa-whatsapp"></i>
+                            Consultar por WhatsApp
+                        </a>
                     </div>
                     
                     <div class="services__card">
@@ -224,6 +307,10 @@
                             <li><i class="fas fa-check"></i> Material didáctico especializado</li>
                             <li><i class="fas fa-check"></i> Certificaciones reconocidas</li>
                         </ul>
+                        <a href="https://wa.me/56966492271?text=Hola%20Training%20360,%20me%20interesa%20conocer%20más%20sobre%20sus%20programas%20de%20Capacitación%20y%20Formación%20en%20prevención%20de%20riesgos.%20¿Podrían%20brindarme%20más%20información?" target="_blank" class="services__card-button">
+                            <i class="fab fa-whatsapp"></i>
+                            Consultar por WhatsApp
+                        </a>
                     </div>
                     
                     <div class="services__card">
@@ -240,6 +327,29 @@
                             <li><i class="fas fa-check"></i> Programas de bienestar</li>
                             <li><i class="fas fa-check"></i> Seguimiento de indicadores</li>
                         </ul>
+                        <a href="https://wa.me/56966492271?text=Hola%20Training%20360,%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios%20de%20Bienestar%20Laboral%20para%20crear%20ambientes%20de%20trabajo%20saludables.%20¿Podrían%20brindarme%20más%20información?" target="_blank" class="services__card-button">
+                            <i class="fab fa-whatsapp"></i>
+                            Consultar por WhatsApp
+                        </a>
+                    </div>
+                    
+                    <div class="services__card">
+                        <div class="services__card-icon">
+                            <i class="fas fa-magnifying-glass-chart"></i>
+                        </div>
+                        <h3 class="services__card-title">Auditoría de Cumplimiento del Sistema de Gestión</h3>
+                        <p class="services__card-description">
+                            Realizamos auditorías exhaustivas para asegurar que tu sistema de gestión cumpla con todas las normativas y estándares de seguridad y salud ocupacional.
+                        </p>
+                        <ul class="services__card-features">
+                            <li><i class="fas fa-check"></i> Evaluación de procesos internos</li>
+                            <li><i class="fas fa-check"></i> Identificación de no conformidades</li>
+                            <li><i class="fas fa-check"></i> Recomendaciones para la mejora continua</li>
+                        </ul>
+                        <a href="https://wa.me/56966492271?text=Hola%20Training%20360,%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios%20de%20Auditoría%20de%20Cumplimiento%20del%20Sistema%20de%20Gestión.%20¿Podrían%20brindarme%20más%20información?" target="_blank" class="services__card-button">
+                            <i class="fab fa-whatsapp"></i>
+                            Consultar por WhatsApp
+                        </a>
                     </div>
                 </div>
             </div>
@@ -255,7 +365,7 @@
                 
                 <div class="benefits__content">
                     <div class="benefits__image">
-                        <img src="./assets/img/safety-equipment.png" alt="Equipos de seguridad industrial" class="benefits__img">
+                        <img src="./assets/img/safety-equipment.jpg" alt="Equipos de seguridad industrial" class="benefits__img">
                     </div>
                     
                     <div class="benefits__data">
@@ -372,7 +482,8 @@
                                 </div>
                                 <div class="contact__info-content">
                                     <h3>Email</h3>
-                                    <a href="mailto:training360ltda@gmail.com">training360ltda@gmail.com</a>
+                                    <a href="mailto:ssilva@training-360.cl">ssilva@training-360.cl</a>
+                                    <a href="mailto:mcarolinagilc@training-360.cl">mcarolinagilc@training-360.cl</a>
                                 </div>
                             </div>
                             
@@ -382,8 +493,8 @@
                                 </div>
                                 <div class="contact__info-content">
                                     <h3>Teléfonos</h3>
-                                    <a href="tel:+56966492271">+56 966492271</a>
-                                    <a href="tel:+56942507093">+56 942507093</a>
+                                    <a href="tel:+56966492271">+56 9 6649 2271</a>
+                                    <a href="tel:+56978114721">+56 9 7811 4721</a>
                                 </div>
                             </div>
                             
@@ -393,13 +504,27 @@
                                 </div>
                                 <div class="contact__info-content">
                                     <h3>Ubicación</h3>
-                                    <p>Chile</p>
+                                    <p>Coronel 2366, Providencia, Región Metropolitana</p>
                                 </div>
+                            </div>
+                            
+                            <!-- Mapa de Google Maps -->
+                            <div class="contact__map">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.8234567890123!2d-70.6123456!3d-33.4234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5a1b2c3d4e5%3A0x1234567890abcdef!2sCoronel%202366%2C%20Providencia%2C%20Regi%C3%B3n%20Metropolitana%2C%20Chile!5e0!3m2!1ses!2scl!4v1234567890123!5m2!1ses!2scl" 
+                                    width="100%" 
+                                    height="300" 
+                                    style="border:0;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    title="Ubicación Training 360 - Coronel 2366, Providencia">
+                                </iframe>
                             </div>
                         </div>
                     </div>
                     
-                    <form class="contact__form" id="contact-form">
+                    <form class="contact__form" id="formContacto">
                         <div class="contact__form-header">
                             <h3>Solicita una Cotización</h3>
                             <p>Completa el formulario y nos contactaremos contigo</p>
@@ -448,6 +573,9 @@
                         
                         <div class="contact__form-message" id="contact-message"></div>
                     </form>
+                    
+                    <!-- Popup de confirmación -->
+                    <div id="popupExito">✅ Tu mensaje ha sido enviado. Te contactaremos en breve.</div>
                 </div>
             </div>
         </section>
@@ -460,7 +588,6 @@
                 <div class="footer__data">
                     <div class="footer__logo">
                         <img src="./assets/img/logo.JPG" alt="Training 360 Logo" class="footer__logo-img">
-                        <h3 class="footer__logo-title">Training 360</h3>
                     </div>
                     <p class="footer__description">
                         Líderes en Seguridad y Salud Ocupacional. 
@@ -492,15 +619,19 @@
                     <ul class="footer__list">
                         <li>
                             <i class="fas fa-envelope footer__icon"></i>
-                            <a href="mailto:training360ltda@gmail.com" class="footer__link">training360ltda@gmail.com</a>
+                            <a href="mailto:ssilva@training-360.cl" class="footer__link">ssilva@training-360.cl</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope footer__icon"></i>
+                            <a href="mailto:mcarolinagilc@training-360.cl" class="footer__link">mcarolinagilc@training-360.cl</a>
                         </li>
                         <li>
                             <i class="fas fa-phone footer__icon"></i>
-                            <a href="tel:+56966492271" class="footer__link">+56 966492271</a>
+                            <a href="tel:+56966492271" class="footer__link">+56 9 6649 2271</a>
                         </li>
                         <li>
                             <i class="fas fa-phone footer__icon"></i>
-                            <a href="tel:+56942507093" class="footer__link">+56 942507093</a>
+                            <a href="tel:+56978114721" class="footer__link">+56 9 7811 4721</a>
                         </li>
                     </ul>
                 </div>
@@ -514,6 +645,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/56966492271?text=Hola%20Training%20360,%20me%20gustaría%20obtener%20más%20información%20sobre%20sus%20servicios%20de%20seguridad%20y%20salud%20ocupacional." target="_blank" class="whatsapp-float" id="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <!-- Scroll Up Button -->
     <a href="#" class="scrollup" id="scroll-up">
