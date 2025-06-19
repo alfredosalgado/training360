@@ -252,6 +252,7 @@ input, textarea, select {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .top-bar__contact {
