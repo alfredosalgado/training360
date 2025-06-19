@@ -26,7 +26,7 @@
   --biggest-font-size: 3rem;
   --h1-font-size: 2.5rem;
   --h2-font-size: 2rem;
-  --h3-font-size: 1.5rem;
+  --h3-font-size: 1.2rem;
   --h4-font-size: 1.25rem;
   --normal-font-size: 1rem;
   --small-font-size: 0.875rem;
@@ -76,19 +76,8 @@
   --border-radius-xl: 1.5rem;
 }
 
-/* Responsive Typography */
-@media screen and (max-width: 992px) {
-  :root {
-    --biggest-font-size: 2.5rem;
-    --h1-font-size: 2rem;
-    --h2-font-size: 1.75rem;
-    --h3-font-size: 1.25rem;
-    --h4-font-size: 1.125rem;
-    --normal-font-size: 0.938rem;
-    --small-font-size: 0.813rem;
-    --smaller-font-size: 0.75rem;
-  }
-}
+/* Responsive Typography - REMOVED */
+/* Los tamaños de fuente ahora son consistentes en todas las pantallas */
 
 /* =============== BASE =============== */
 * {
@@ -179,7 +168,7 @@ input, textarea, select {
 }
 
 .section__title {
-  font-size: var(--h2-font-size);
+  font-size: 1.1rem;
   color: var(--dark-color);
   margin-bottom: var(--mb-1);
 }
@@ -188,6 +177,7 @@ input, textarea, select {
   color: var(--gray-600);
   max-width: 600px;
   margin: 0 auto;
+  font-size: 1rem;
 }
 
 /* Buttons */
@@ -198,7 +188,7 @@ input, textarea, select {
   padding: 1rem 2rem;
   border-radius: var(--border-radius-md);
   font-weight: var(--font-semibold);
-  font-size: var(--normal-font-size);
+  font-size: 0.8rem;
   text-align: center;
   transition: var(--transition);
   cursor: pointer;
@@ -293,7 +283,7 @@ input, textarea, select {
   top: 3rem; /* Ajustado para estar exactamente debajo de la top bar */
   left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.95);
+  background: #2f4255;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: var(--shadow-sm);
@@ -336,7 +326,7 @@ input, textarea, select {
 }
 
 .nav__link {
-  color: var(--dark-color);
+  color: var(--gray-300);
   font-weight: var(--font-medium);
   padding: var(--mb-0-5) var(--mb-1);
   border-radius: var(--border-radius);
@@ -399,7 +389,7 @@ input, textarea, select {
 }
 
 .hero__title {
-  font-size: var(--biggest-font-size);
+  font-size: 1.5rem;
   margin-bottom: var(--mb-1-5);
   line-height: 1.1;
 }
@@ -412,7 +402,7 @@ input, textarea, select {
 }
 
 .hero__description {
-  font-size: var(--h4-font-size);
+  font-size: 1rem;
   color: var(--gray-600);
   margin-bottom: var(--mb-2-5);
   line-height: 1.6;
@@ -429,6 +419,7 @@ input, textarea, select {
   border-radius: var(--border-radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-xl);
+  margin-top: 120px;
 }
 
 .hero__img {
@@ -459,7 +450,7 @@ input, textarea, select {
 }
 
 .about__description {
-  font-size: var(--h4-font-size);
+  font-size: 1rem;
   color: var(--gray-600);
   margin-bottom: var(--mb-2);
   line-height: 1.6;
@@ -490,7 +481,7 @@ input, textarea, select {
 }
 
 .about__item-title {
-  font-size: var(--h3-font-size);
+  font-size: 1.1rem;
   margin-bottom: var(--mb-0-5);
   color: var(--dark-color);
 }
@@ -569,10 +560,12 @@ input, textarea, select {
 .challenge__item-content h3 {
   color: var(--white-color);
   margin-bottom: var(--mb-0-5);
+  font-size: 1rem;
 }
 
 .challenge__item-content p {
   color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
 }
 
 .challenge__image {
@@ -641,7 +634,7 @@ input, textarea, select {
 }
 
 .services__card-title {
-  font-size: var(--h3-font-size);
+  font-size: 1rem;
   margin-bottom: var(--mb-1);
   color: var(--dark-color);
 }
@@ -650,12 +643,14 @@ input, textarea, select {
   color: var(--gray-600);
   margin-bottom: var(--mb-1-5);
   line-height: 1.6;
+  font-size: 0.8rem;
 }
 
 .services__card-features {
   list-style: none;
   flex-grow: 1;
   margin-bottom: var(--mb-1-5);
+  font-size: 0.8rem;
 }
 
 .services__card-features li {
@@ -735,12 +730,13 @@ input, textarea, select {
 
 .benefits__item-title {
   color: var(--dark-color);
-  font-size: var(--h4-font-size);
+  font-size: 1rem;
 }
 
 .benefits__item-description {
   color: var(--gray-600);
   line-height: 1.6;
+  font-size: 0.8rem;
 }
 
 /* =============== WHY US =============== */
@@ -796,7 +792,7 @@ input, textarea, select {
 }
 
 .why-us__card-title {
-  font-size: var(--h3-font-size);
+  font-size: 1rem;
   margin-bottom: var(--mb-1);
   color: var(--dark-color);
 }
@@ -804,6 +800,7 @@ input, textarea, select {
 .why-us__card-description {
   color: var(--gray-600);
   line-height: 1.6;
+  font-size: 0.8rem;
 }
 
 .why-us__image {
@@ -866,13 +863,18 @@ input, textarea, select {
 .contact__info-content h3 {
   color: var(--dark-color);
   margin-bottom: var(--mb-0-25);
-  font-size: var(--h4-font-size);
+  font-size: 1rem;
 }
 
 .contact__info-content a {
   color: var(--gray-600);
   display: block;
   margin-bottom: var(--mb-0-25);
+  font-size: 0.9rem;
+}
+
+.contact__info-content p {
+  font-size: 0.9rem;
 }
 
 .contact__info-content a:hover {
@@ -1267,7 +1269,7 @@ input, textarea, select {
   }
   
   .hero__title {
-    font-size: var(--h1-font-size);
+    font-size: 1.5rem;
   }
   
   .hero__description {
@@ -1311,7 +1313,7 @@ input, textarea, select {
     padding: 0.6rem 1.2rem;
     font-size: 0.8rem;
   }
-}
+
 
 /*=============== MEDIA QUERIES ===============*/
 /* For medium devices */
@@ -1610,7 +1612,7 @@ input, textarea, select {
   }
 
   .hero__title {
-    font-size: var(--h2-font-size);
+    font-size: 1.5rem;
   }
 
   .hero__description {
@@ -1688,21 +1690,8 @@ input, textarea, select {
   animation: fadeInRight 0.6s ease-out;
 }
 
-/* =============== DARK THEME =============== */
-@media (prefers-color-scheme: dark) {
-  .header {
-    background: #2f4255;
-  }
-  
-  .nav__link {
-    color: var(--gray-300);
-  }
-  
-  .nav__link:hover,
-  .nav__link.active-link {
-    color: var(--primary-color);
-  }
-}
+/* =============== DARK THEME (FORCED) =============== */
+/* Tema oscuro aplicado por defecto - media query removida */
 
 /* =============== PRINT STYLES =============== */
 @media print {
