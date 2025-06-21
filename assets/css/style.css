@@ -1580,6 +1580,30 @@ input, textarea, select {
   }
 }
 
+
+
+@media screen and (max-width: 420px) {
+
+  .top-bar {
+    padding-top: 35px !important;
+    padding-bottom: 35px !important;
+  }
+
+  .top-bar__contact {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .header {
+    margin-top: 20px;
+  }
+
+}
+
+
+
 /* For extra small devices */
 @media screen and (max-width: 350px) {
   .container {
